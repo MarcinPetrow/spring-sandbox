@@ -11,4 +11,4 @@ pluginManagement {
 		}
 	}
 }
-rootProject.name = 'sandbox'
+rootProject.name = 'SandboxProject'

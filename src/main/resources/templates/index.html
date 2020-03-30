@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+  </head>
+  <body class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Sandbox</a>
+       <ul class="navbar-nav mr-auto">
+       </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <button class="btn btn-outline-success mr-sm-2" type="submit">Join</button>
+        <input class="form-control mr-sm-2" type="text" placeholder="Login" aria-label="Login">
+        <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+      </form>
+    </nav>    
+    
+    
+    <div class="jumbotron">
+  <h1 class="display-4">Hi, it's nice to see you here!</h1>
+  <p class="lead">This is a sandbox project based on Spring. Reason of that is still unknown but old farmers said that this one is most important.</p>
+  <hr class="my-4">
+</div>
+    
+    <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+
+<table>
+  <thead>
+      <tr>
+          <th> Title </th>
+      </tr>
+  </thead>
+  <tbody>
+  <tr th:if="${tasks.empty}">
+          <td colspan="2"> No Tasks Available </td>
+      </tr>
+      <tr th:each="task : ${tasks}">
+          <td><span th:text="${task}"> Title </span></td>
+      </tr>
+  </tbody>
+</table>
+
+
+  </body>
+</html>
